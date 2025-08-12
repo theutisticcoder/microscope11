@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cameraStream = null;
 
     let currentZoom = 1;
-    const zoomStep = 0.2;
-    const maxZoom = 20;
+    const zoomStep = 1;
+    const maxZoom = 50;
     const minZoom = 1;
     
     let isDragging = false;
