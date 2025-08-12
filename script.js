@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const zoomOutButton = document.getElementById('zoom-out');
 
     let currentZoom = 1;
-    const zoomStep = 0.2;
+    const zoomStep = 1.0;
     const maxZoom = 20; // Maximum zoom is now 20
     const minZoom = 1;
     
