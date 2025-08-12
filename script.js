@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to start the camera stream
     async function startCamera() {
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ video: true, facingMode: 'environment' });
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true, video: {facingMode: 'environment'} });
             liveCamera.srcObject = stream;
             cameraStream = stream;
             liveCamera.style.display = 'block';
