@@ -7,12 +7,13 @@
 <body>
     <div class="container">
         <h1>Virtual Microscope</h1>
+        <input type="file" id="image-upload" accept="image/*">
         <div class="microscope-stage">
-            <img id="sample-image" src="your_sample_photo.jpg" alt="Microscope Sample">
+            <img id="sample-image" src="#" alt="Microscope Sample" style="display:none;">
         </div>
         <div class="controls">
-            <button id="zoom-in">+</button>
-            <button id="zoom-out">-</button>
+            <button id="zoom-in" disabled>+</button>
+            <button id="zoom-out" disabled>-</button>
         </div>
     </div>
     <script src="script.js"></script>
