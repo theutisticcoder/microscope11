@@ -22,8 +22,12 @@ body {
     border: 2px solid #333;
     overflow: hidden;
     position: relative;
-    cursor: grab;
+    cursor: grab; /* Cursor will be a grab hand */
     margin: 20px auto;
+}
+
+.microscope-stage.grabbing {
+    cursor: grabbing; /* Cursor changes while dragging */
 }
 
 #sample-image {
@@ -32,6 +36,7 @@ body {
     object-fit: cover;
     transform-origin: 0 0;
     transition: transform 0.2s ease-out;
+    user-select: none; /* Prevents text/image selection while dragging */
 }
 
 .controls button {
