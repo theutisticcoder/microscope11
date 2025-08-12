@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Mouse down event to start dragging
     microscopeStage.addEventListener('mousedown', (e) => {
+        e.preventDefault();
         if (currentZoom > 1) { // Only allow dragging when zoomed in
             isDragging = true;
             startX = e.clientX - imageX;
@@ -60,12 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mouse up event to stop dragging
     microscopeStage.addEventListener('mouseup', () => {
+        e.preventDefault();
         isDragging = false;
         microscopeStage.classList.remove('grabbing');
     });
 
     // Mouse move event to handle the actual dragging
     microscopeStage.addEventListener('mousemove', (e) => {
+        e.preventDefault();
         if (!isDragging) return;
         e.preventDefault();
         imageX = e.clientX - startX;
