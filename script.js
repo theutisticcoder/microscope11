@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mouse up event to stop dragging
-    microscopeStage.addEventListener('mouseup', () => {
+    microscopeStage.addEventListener('mouseup', (e) => {
         e.preventDefault();
         isDragging = false;
         microscopeStage.classList.remove('grabbing');
