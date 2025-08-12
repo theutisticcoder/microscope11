@@ -7,11 +7,15 @@
 <body>
     <div class="container">
         <h1>Virtual Microscope</h1>
-        <input type="file" id="image-upload" accept="image/*">
+        <div class="controls-top">
+            <input type="file" id="image-upload" accept="image/*">
+            <button id="toggle-camera">Toggle Camera</button>
+        </div>
         <div class="microscope-stage">
             <img id="sample-image" src="#" alt="Microscope Sample" style="display:none;">
+            <video id="live-camera" style="display:none;"></video>
         </div>
-        <div class="controls">
+        <div class="controls-bottom">
             <button id="zoom-in" disabled>+</button>
             <button id="zoom-out" disabled>-</button>
         </div>

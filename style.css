@@ -16,30 +16,34 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.controls-top, .controls-bottom {
+    margin: 10px 0;
+}
+
 .microscope-stage {
     width: 400px;
     height: 300px;
     border: 2px solid #333;
     overflow: hidden;
     position: relative;
-    cursor: grab; /* Cursor will be a grab hand */
+    cursor: grab;
     margin: 20px auto;
 }
 
 .microscope-stage.grabbing {
-    cursor: grabbing; /* Cursor changes while dragging */
+    cursor: grabbing;
 }
 
-#sample-image {
+#sample-image, #live-camera {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transform-origin: 0 0;
     transition: transform 0.2s ease-out;
-    user-select: none; /* Prevents text/image selection while dragging */
+    user-select: none;
 }
 
-.controls button {
+.controls-top button, .controls-bottom button {
     font-size: 24px;
     padding: 5px 15px;
     margin: 0 5px;
